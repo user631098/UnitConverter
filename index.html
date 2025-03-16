@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unit Converter</title>
+    <link rel="icon" type="image/x-icon" href="assets/Icon.PNG" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="code.js" defer></script>
+  </head>
+  <body>
+    <header id="head">
+      <h1 id="headerText">ConvertUnits</h1>
+      <img id="sun" src="assets/sun.png" alt="Light" />
+      <img id="moon" src="assets/moon.png" alt="Light" />
+    </header>
+    <div class="container">
+      <p id="convertText" class="convertText">Convert units:</p>
+      <div class="quantitiesContainer">
+        <button class="quantity" id="length" onclick="changeQuant('length')">
+          Length
+        </button>
+        <button class="quantity" id="mass" onclick="changeQuant('mass')">
+          Mass
+        </button>
+        <button class="quantity" id="time" onclick="changeQuant('time')">
+          Time
+        </button>
+        <button class="quantity" id="data" onclick="changeQuant('data')">
+          Data
+        </button>
+        <button class="quantity" id="temp" onclick="changeQuant('temp')">
+          Temperature
+        </button>
+        <button class="quantity" id="energy" onclick="changeQuant('energy')">
+          Energy
+        </button>
+        <button
+          class="quantity"
+          id="pressure"
+          onclick="changeQuant('pressure')"
+        >
+          Pressure
+        </button>
+      </div>
+      <div id="tableContainer" class="tableContainer">
+        <div class="unitSelectBox">
+          <p class="unitText">From:</p>
+          <select id="selectUnit" class="fromUnit"></select>
+          <p class="unitText">To:</p>
+          <select id="selectUnit" class="toUnit"></select>
+        </div>
+        <div class="inputFieldBox">
+          <input
+            class="inputField"
+            id="input"
+            type="number"
+            placeholder="Enter value"
+            max="999999"
+            min="0"
+          />
+          <input
+            class="inputField"
+            id="output"
+            type="number"
+            placeholder="Converted Value"
+          />
+        </div>
+        <div class="convertButtonBox">
+          <button onclick="convert()" id="convertButton">Convert</button>
+        </div>
+        <div class="checkBox">
+          <input type="checkbox" id="checkbox" />
+          <label for="checkbox">Auto Conversion</label>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
